@@ -1,4 +1,5 @@
-@charset "utf-8";
+@charset  "UTF-8";
+
 /* 　　　　 */
 /* 共通設定 */
 /* 　　　　 */
@@ -80,6 +81,7 @@ footer {
 }
 
 .main {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -87,9 +89,20 @@ footer {
     margin: 50px 80px;
 }
 .works_tab{
-    width: 60%;
-    
+    width: 40%;
+    box-sizing: border-box; /* 内部の余白やボーダーも要素の幅に含める */
 }
+    
+
+/* .works_tab 内の要素を親要素に合わせる */
+.works_tab h2,
+.works_tab p,
+.works_tab .works_ditail,
+.works_tab .works_explanation {
+    width: 100%;
+    box-sizing: border-box; /* 内部の余白やボーダーも要素の幅に含める */
+}
+
 .main h2 {
     font-size: 120%;
     border-left: 10px solid #003300;
@@ -110,6 +123,7 @@ dl {
 .works_explanation {
     width: 60%;
     padding: auto;
+    
 
 }
 
@@ -139,4 +153,12 @@ dl {
 
 /* レスポンシブ設定 */
 /* スマホサイズ */
-@media screen and (max-width: 390px) {}
+@media screen and (max-width: 490px) {
+    .toppage_icon {
+        width: 10px;
+        height: 10px;
+        position: fixed;
+        right: 20px;
+        bottom: 80px;
+    }
+}
