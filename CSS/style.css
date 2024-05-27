@@ -1,121 +1,149 @@
-/* ルート要素（html）のフォントサイズを16pxに設定 */
 html {
     font-size: 16px;
 }
 
-/* bodyの基本的なスタイルを適用 */
+
 body {
-    font-family: 'Noto Sans JP', sans-serif; /* 'Noto Sans JP' フォントを使用し、利用可能な場合はサンセリフにフォールバック */
-    color: #303030; /* テキストの色 */
-    line-height: 1.6; /* 行の高さ */
-    margin: 0; /* デフォルトのマージンを削除 */
-    padding: 0; /* デフォルトのパディングを削除 */
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #303030;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
-/* リンクから下線を削除し、リンクの色を設定 */
+
 a {
-    color: #303030; /* リンクの色 */
-    text-decoration: none; /* リンクから下線を削除 */
+    color: #303030;
+    text-decoration: none;
 }
 
-/* 画像をレスポンシブにする */
+/* 画像をレスポンシブに変更*/
 img {
-    max-width: 100%; /* 画像がコンテナの幅を超えないようにする */
-    height: auto; /* アスペクト比を維持 */
+    width: 800px;
+    max-width: 100%;
+    height: auto;
 }
 
 /* トップタイトルのスタイル */
 .top_title {
-    padding: 30px 20px; /* 上下のパディング30px、左右のパディング20px */
-    font-size: 36px; /* トップタイトルのフォントサイズ */
-    text-align: center; /* テキストを中央揃え */
+    padding: 30px 20px;
+    font-size: 36px;
+    text-align: center;
 }
 
 /* フッターのスタイル */
 footer {
-    background-color: #f0f0aa; /* 背景色 */
-    color: #303030; /* テキストの色 */
-    text-align: center; /* テキストを中央揃え */
-    padding: 20px 0; /* 上下のパディング20px */
+    background-color: #f0f0aa;
+    /* 背景色 */
+    color: #303030;
+    /* テキストの色 */
+    text-align: center;
+    /* テキストを中央揃え */
+    padding: 20px 0;
 }
 
 /* フッター名のスタイル */
 .footer_name {
-    font-size: 24px; /* フォントサイズ */
+    font-size: 24px;
 }
+
 
 /* トップページアイコンのスタイル */
 .toppage_icon {
-    position: fixed; /* 固定位置 */
-    right: 20px; /* ビューポートの右端からの距離 */
-    bottom: 20px; /* ビューポートの下端からの距離 */
-    width: 60px; /* アイコンの幅 */
-    height: 60px; /* アイコンの高さ */
+    position: fixed;
+    /* 固定位置 */
+    right: 40px;
+    /* ビューポートの右端からの距離 */
+    bottom: 30px;
+    /* ビューポートの下端からの距離 */
+    width: 100px;
+    /* アイコンの幅 */
+    height: 100px;
+    /* アイコンの高さ */
 }
 
 /* ワークスの背景とサブタイトルのスタイル */
 .works_bg,
 .works_sub {
-    text-align: center; /* テキストを中央揃え */
-    padding: 20px 0; /* 上下のパディング20px、左右はパディングなし */
-    font-size: 24px; /* フォントサイズ */
+    text-align: center;
+    /* テキストを中央揃え */
+    padding: 20px 0;
+    font-size: 24px;
+    /* フォントサイズ */
 }
 
 /* メインセクションのスタイル */
 .main {
-    display: flex; /* フレックスボックスレイアウトを使用 */
-    flex-wrap: wrap; /* アイテムが折り返されるようにする */
-    justify-content: center; /* アイテムを水平方向に中央揃え */
-    padding: 20px; /* メインセクションの周囲のパディング */
+    display: flex;
+    /* 横並び */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* アイテムが折り返されるようにする */
+    padding: 20px;
+    /* メインセクションのパディング */
 }
 
 /* 各ワークタブのスタイル */
 .works_tab {
-    /* width: calc(50% - 40px); コンテナの幅の50％からマージンを引いた幅 */
-    margin: 20px; /* 各タブの周囲のマージン */
-    padding: 20px; /* 各タブ内のパディング */
-    background-color: #f9f9f9; /* 背景色 */
-    border-radius: 10px; /* 角丸 */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 微妙な効果のためのボックスシャドウ */
+    margin: 20px;
+    /* タブの周囲のマージン */
+    padding: 20px;
+    /* タブ内のパディング */
+    background-color: #f9f9f9;
+    /* 背景色 */
+    border-radius: 10px;
+    /* 角丸 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* ボックスシャドウ */
 }
 
 /* ワークタイトルのスタイル */
 .works_tab h2 {
-    font-size: 24px; /* フォントサイズ */
-    border-left: 5px solid #003300; /* 左側のボーダー */
-    padding-left: 10px; /* 左のパディング */
-    margin-bottom: 10px; /* 下のマージン */
+    font-size: 24px;
+    border-left: 5px solid #003300;
+    /* 左側のボーダー */
+    padding-left: 10px;
+    margin-bottom: 10px;
 }
 
 /* ワークタブ内の画像のスタイル */
 .works_tab img {
-    max-width: 100%; /* 画像がコンテナの幅を超えないようにする */
-    height: auto; /* アスペクト比を維持 */
-    margin: 10px 0; /* 上下のマージン */
+    max-width: 100%;
+    /* 画像が最大幅を超えないように変更 */
+    height: auto;
+    margin: 10px 0;
 }
 
 /* ワークタブ内の段落のスタイル */
 .works_tab p {
-    font-size: 16px; /* フォントサイズ */
-    margin-bottom: 10px; /* 下のマージン */
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 /* ワークタブ内のワーク説明のスタイル */
 .works_explanation {
-    font-size: 16px; /* フォントサイズ */
-    margin-bottom: 10px; /* 下のマージン */
+    font-size: 16px; 
+    margin-bottom: 10px;
+
 }
 
 /* レスポンシブデザイン */
 
-/* タブレットサイズの画面に対するメディアクエリ */
+/* タブレットサイズのメディアクエリ */
 @media screen and (max-width: 768px) {
-    /* 小さい画面に合わせてスタイルを調整 */
+
+    /* 画面に合わせてスタイルを調整 */
     .top_title {
-        font-size: 24px; /* フォントサイズを減少 */
+        font-size: 24px;
+        /* フォントサイズを減少 */
+    }
+}
+    
+/* スマホサイズのメディアクエリ */
+@media screen and (max-width: 400px) {
+    .footer_name {
+        font-size: 18px;
     }
 
-    .footer_name {
-        font-size: 18px; 
-    }
 }
