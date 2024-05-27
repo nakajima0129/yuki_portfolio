@@ -1,164 +1,119 @@
-@charset  "UTF-8";
-
-/* 　　　　 */
-/* 共通設定 */
-/* 　　　　 */
-
+/* ルート要素（html）のフォントサイズを16pxに設定 */
 html {
     font-size: 16px;
 }
 
+/* bodyの基本的なスタイルを適用 */
 body {
-    font-family: 'Noto Sans JP', 'sans-serif';
-    color: #303030;
-    line-height: 2em;
-    margin: 0 auto;
+    font-family: 'Noto Sans JP', sans-serif; /* 'Noto Sans JP' フォントを使用し、利用可能な場合はサンセリフにフォールバック */
+    color: #303030; /* テキストの色 */
+    line-height: 1.6; /* 行の高さ */
+    margin: 0; /* デフォルトのマージンを削除 */
+    padding: 0; /* デフォルトのパディングを削除 */
 }
 
+/* リンクから下線を削除し、リンクの色を設定 */
 a {
-    color: #303030;
-    text-decoration: none;
+    color: #303030; /* リンクの色 */
+    text-decoration: none; /* リンクから下線を削除 */
 }
 
+/* 画像をレスポンシブにする */
 img {
-    width: 100%;
+    max-width: 100%; /* 画像がコンテナの幅を超えないようにする */
+    height: auto; /* アスペクト比を維持 */
 }
 
-
-.top_title,
-.works_bg title,
-.works_sub title,
-.footer_name {
-    font-size: 100px;
-    font-weight: bold;
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-/* ヘッダー設定 */
+/* トップタイトルのスタイル */
 .top_title {
-    padding: 30px 50px;
-    font-size: 70px;
+    padding: 30px 20px; /* 上下のパディング30px、左右のパディング20px */
+    font-size: 36px; /* トップタイトルのフォントサイズ */
+    text-align: center; /* テキストを中央揃え */
 }
 
-/* フッター設定 */
+/* フッターのスタイル */
 footer {
-    background-color: #f0f0aa;
-    color: #303030;
-    text-align: center;
-    padding: 0 0 20px 0;
-    width: 100%;
-
+    background-color: #f0f0aa; /* 背景色 */
+    color: #303030; /* テキストの色 */
+    text-align: center; /* テキストを中央揃え */
+    padding: 20px 0; /* 上下のパディング20px */
 }
 
+/* フッター名のスタイル */
 .footer_name {
-    font-family: 'Noto Sans JP', 'sans-serif';
-    font-size: 30px;
-    padding: 30px 50px;
+    font-size: 24px; /* フォントサイズ */
 }
 
-/* トップページのアイコン設定 */
+/* トップページアイコンのスタイル */
 .toppage_icon {
-    position: fixed;
-    right: 70px;
-    bottom: 60px;
+    position: fixed; /* 固定位置 */
+    right: 20px; /* ビューポートの右端からの距離 */
+    bottom: 20px; /* ビューポートの下端からの距離 */
+    width: 60px; /* アイコンの幅 */
+    height: 60px; /* アイコンの高さ */
 }
 
-/* 　　　　　　　　　 */
-/* セクション共通設定 */
-/* 　　　　　　　　　 */
-
-
-.works_bg {
-    padding: 50px 25px;
-    font-size: 30px;
-}
-
+/* ワークスの背景とサブタイトルのスタイル */
+.works_bg,
 .works_sub {
-    padding: 50px 25px;
-    font-size: 20px;
-
+    text-align: center; /* テキストを中央揃え */
+    padding: 20px 0; /* 上下のパディング20px、左右はパディングなし */
+    font-size: 24px; /* フォントサイズ */
 }
 
+/* メインセクションのスタイル */
 .main {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    text-align: center;
-    margin: 50px 80px;
-}
-.works_tab{
-    width: 40%;
-    box-sizing: border-box; /* 内部の余白やボーダーも要素の幅に含める */
-}
-    
-
-/* .works_tab 内の要素を親要素に合わせる */
-.works_tab h2,
-.works_tab p,
-.works_tab .works_ditail,
-.works_tab .works_explanation {
-    width: 100%;
-    box-sizing: border-box; /* 内部の余白やボーダーも要素の幅に含める */
+    display: flex; /* フレックスボックスレイアウトを使用 */
+    flex-wrap: wrap; /* アイテムが折り返されるようにする */
+    justify-content: center; /* アイテムを水平方向に中央揃え */
+    padding: 20px; /* メインセクションの周囲のパディング */
 }
 
-.main h2 {
-    font-size: 120%;
-    border-left: 10px solid #003300;
-    text-align: left;
+/* 各ワークタブのスタイル */
+.works_tab {
+    width: calc(50% - 40px); /* コンテナの幅の50％からマージンを引いた幅 */
+    margin: 20px; /* 各タブの周囲のマージン */
+    padding: 20px; /* 各タブ内のパディング */
+    background-color: #f9f9f9; /* 背景色 */
+    border-radius: 10px; /* 角丸 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 微妙な効果のためのボックスシャドウ */
 }
 
+/* ワークタイトルのスタイル */
+.works_tab h2 {
+    font-size: 24px; /* フォントサイズ */
+    border-left: 5px solid #003300; /* 左側のボーダー */
+    padding-left: 10px; /* 左のパディング */
+    margin-bottom: 10px; /* 下のマージン */
+}
+
+/* ワークタブ内の画像のスタイル */
 .works_tab img {
-    width: 60%;
-    margin-top: 10px;
+    max-width: 100%; /* 画像がコンテナの幅を超えないようにする */
+    height: auto; /* アスペクト比を維持 */
+    margin: 10px 0; /* 上下のマージン */
 }
 
-.works_tab p,
-dl {
-    margin-top: 10px;
-    text-align: left;
+/* ワークタブ内の段落のスタイル */
+.works_tab p {
+    font-size: 16px; /* フォントサイズ */
+    margin-bottom: 10px; /* 下のマージン */
 }
 
+/* ワークタブ内のワーク説明のスタイル */
 .works_explanation {
-    width: 60%;
-    padding: auto;
-    
-
+    font-size: 16px; /* フォントサイズ */
+    margin-bottom: 10px; /* 下のマージン */
 }
 
+/* レスポンシブデザイン */
 
-
-
-
-/* レスポンシブ設定 */
-/* タブレットサイズ */
+/* タブレットサイズの画面に対するメディアクエリ */
 @media screen and (max-width: 768px) {
-    .top {
-        width: 100%;
-    }
-
+    /* 小さい画面に合わせてスタイルを調整 */
     .top_title {
-        font-size: 50px;
+        font-size: 24px; /* フォントサイズを減少 */
     }
 
-    .works_title {
-        font-size: 25px;
-    }
-
-    .works_explanation {
-        width: 90%;
-    }
-}
-
-/* レスポンシブ設定 */
-/* スマホサイズ */
-@media screen and (max-width: 490px) {
-    .toppage_icon {
-        width: 10px;
-        height: 10px;
-        position: fixed;
-        right: 20px;
-        bottom: 80px;
-    }
-}
+    .footer_name {
+        font-size: 18px; /* フォントサ
