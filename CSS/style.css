@@ -71,7 +71,7 @@ footer {
 
 /* 各ワークタブのスタイル */
 .works_tab {
-    width: calc(50% - 40px); /* コンテナの幅の50％からマージンを引いた幅 */
+    /* width: calc(50% - 40px); コンテナの幅の50％からマージンを引いた幅 */
     margin: 20px; /* 各タブの周囲のマージン */
     padding: 20px; /* 各タブ内のパディング */
     background-color: #f9f9f9; /* 背景色 */
